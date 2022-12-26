@@ -1,5 +1,7 @@
 ﻿#include <Windows.h>
 #include <gl/glut.h>
+#include <stdio.h>
+#include <conio.h>
 
 int main()
 {
@@ -44,7 +46,7 @@ int main()
 	wglMakeCurrent(hdc, hglrc);
 
 	//char ch;
-	int x = 1271, y = 429;
+	int x = 1273, y = 425;
 	while (true)
 	{
 		/*ch = _getch();
