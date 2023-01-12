@@ -47,6 +47,7 @@ int main()
 
 	//char ch;
 	int x = 1273, y = 425;
+	long temp = 0;
 	while (true)
 	{
 		/*ch = _getch();
@@ -74,7 +75,10 @@ int main()
 		glVertex2f(0.5f, -0.5f);
 		glEnd();
 		glFlush();
-
+		if ((++temp)%60==0)
+		{
+			Sleep(1);
+		}
 	}
 	return 0;
 }
