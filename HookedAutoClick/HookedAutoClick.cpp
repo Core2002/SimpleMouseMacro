@@ -67,13 +67,5 @@ int main()
 		TranslateMessage(&msg);
 	}
 
-	if (x2_Stats == 1)
-	{
-		std::cout << "Clicked\n";
-		mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-		Sleep(5);
-		mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-		Sleep(15);
-	}
 	return 0;
 }
