@@ -36,13 +36,19 @@ LRESULT CALLBACK HookCallBack(int code, WPARAM wParam, LPARAM lParam) {
 }
 
 void* daemonClick(void* args) {
+	INPUT click{};
+	click.type = INPUT_MOUSE;
+	click.mi.dx = 0;
+	click.mi.dy = 0;
+	click.mi.dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP);
+	click.mi.mouseData = 0;
+	click.mi.dwExtraInfo = NULL;
+	click.mi.time = 0;
 	while (true)
 	{
 		if (x2_Stats == 1)
 		{
-			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-			Sleep(5);
-			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+			SendInput(1, &click, sizeof(INPUT));
 		}
 		Sleep(15);
 	}
@@ -51,7 +57,7 @@ void* daemonClick(void* args) {
 
 int main()
 {
-	SetConsoleTitle(L"CPS - 28 - H");
+	SetConsoleTitle(L"CPS - 53 - H");
 	std::cout << "按住鼠标侧键不放自动连点" << std::endl;
 
 	_hook = SetWindowsHookEx(WH_MOUSE_LL, HookCallBack, NULL, 0);
