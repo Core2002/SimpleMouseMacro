@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crosshair", "Crosshair\Cros
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookedAutoClick", "HookedAutoClick\HookedAutoClick.vcxproj", "{23427079-93A1-4C0A-9067-1A68F9D97469}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutoFR", "AutoFR\AutoFR.vcxproj", "{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{23427079-93A1-4C0A-9067-1A68F9D97469}.Release|x64.Build.0 = Release|x64
 		{23427079-93A1-4C0A-9067-1A68F9D97469}.Release|x86.ActiveCfg = Release|Win32
 		{23427079-93A1-4C0A-9067-1A68F9D97469}.Release|x86.Build.0 = Release|Win32
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Debug|x64.ActiveCfg = Debug|x64
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Debug|x64.Build.0 = Debug|x64
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Debug|x86.ActiveCfg = Debug|Win32
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Debug|x86.Build.0 = Debug|Win32
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Release|x64.ActiveCfg = Release|x64
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Release|x64.Build.0 = Release|x64
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Release|x86.ActiveCfg = Release|Win32
+		{3FA1CC33-B6EE-4FF6-AABF-BFEE64E07AFC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
