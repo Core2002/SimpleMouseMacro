@@ -38,6 +38,7 @@ LRESULT CALLBACK HookCallBack(int code, WPARAM wParam, LPARAM lParam) {
 	if (!x1_Stats && last)
 	{
 		show = !show;
+		show? Beep(1080, 150): Beep(500, 150);
 	}
 	last = x1_Stats;
 	return CallNextHookEx(_hook, code, wParam, lParam);
