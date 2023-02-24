@@ -52,6 +52,7 @@ void* daemonClick(void* args) {
 		if (x2_Stats == 1)
 		{
 			MouseLeftButtonDown();
+			Sleep(5);
 			MouseLeftButtonUp();
 		}
 		Sleep(15);
@@ -84,7 +85,7 @@ int main()
 		SetHandle();
 	}
 
-	SetConsoleTitle(L"CPS - 60 - HD");
+	SetConsoleTitle(L"CPS - 30 - HD");
 	std::cout << "按住鼠标侧键不放自动连点" << std::endl;
 
 	_hook = SetWindowsHookEx(WH_MOUSE_LL, HookCallBack, NULL, 0);
