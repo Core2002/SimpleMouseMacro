@@ -1,6 +1,10 @@
 ﻿#include <iostream>
 #include <Windows.h>
+#include <winuser.h>
 #include <pthread.h>
+#include "NTDriverLoader.hpp"
+#include <shlwapi.h>
+#include <comdef.h>
 #define var auto
 
 HANDLE drvhandle;
@@ -68,6 +72,7 @@ void* daemonClick(void* args) {
 		if (x2_Stats == 1)
 		{
 			Call(LeftDown);
+			Sleep(5);
 			Call(LeftUp);
 		}
 		Sleep(15);
@@ -79,8 +84,19 @@ void* daemonClick(void* args) {
 
 int main()
 {
-	SetConsoleTitle(L"CPS - 53 - H - S");
+	SetConsoleTitle(L"CPS - 31 - H - S");
 	std::cout << "按住鼠标侧键不放自动连点" << std::endl;
+	WCHAR Filename[114514];
+	GetModuleFileNameW(0, Filename, 0x400u);
+	PathRemoveFileSpecW(Filename);
+	PathAppendW(Filename, L"SuperMouse64.sys");
+	if (!PathFileExistsW(Filename))
+	{
+		MessageBoxW(0, L"驱动SuperMouse64.sys加载失败，请重新下载并解压软件", L"错误", 0);
+		return 0;
+	}
+	_bstr_t fileName(Filename);
+	MyNTDriverLoader::LoadNTDriver("SuperMouseService", fileName);
 	var ok = SetHandle();
 	std::cout << ok << " Start\n";
 
