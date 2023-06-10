@@ -59,14 +59,6 @@ LRESULT CALLBACK HookCallBack(int code, WPARAM wParam, LPARAM lParam) {
 }
 
 void* daemonClick(void* args) {
-	INPUT click{};
-	click.type = INPUT_MOUSE;
-	click.mi.dx = 0;
-	click.mi.dy = 0;
-	click.mi.dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP);
-	click.mi.mouseData = 0;
-	click.mi.dwExtraInfo = NULL;
-	click.mi.time = 0;
 	while (true)
 	{
 		if (x2_Stats == 1)
